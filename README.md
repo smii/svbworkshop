@@ -19,19 +19,22 @@ minishift start --vm-driver=virtual-box  --memory=5gb
 ```
 
 ###  Log-in to your enviromnent:
-When Minishift is started it will return an url and automaticly will login to your envirmnent  with the user 'developer' when the OC commandline tool is properly installed.
-For this workshop we will need to login with the user 'admin' or a user that has the 'cluster-admin' role.
+When Minishift is started it will return an url and automaticly will login to your environment  with the user 'developer' when the OC commandline tool is properly installed.
 
-### Login as user 'admin' with password 'admin' using the oc command-line tool
-```bash
-oc login <demo environment url>
+#### For this workshop we will need to login with the user 'admin' or a user that has the 'cluster-admin' role.
+
+
+### Login as user 'admin' with password 'admin' using the oc command-line tool. The demo enviroment URL you will retreive after a succesful start of Minishift. Beware that you only need to baseurl + port eg: https://<demourl>:8443.  So without the /console to login to your enviromnent.
+
+```bash 
+oc login <demo environment url> 
 The server uses a certificate signed by an unknown authority.
 You can bypass the certificate check, but any data you send to the server could be intercepted by others.
 Use insecure connections? (y/n): y
 
 Authentication required for <demo environment url> (openshift)
 Username: admin    
-Password: 
+Password: admin
 Login successful.
 
 You have access to the following projects and can switch between them with 'oc project <projectname>':
